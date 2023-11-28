@@ -7,7 +7,7 @@ public class movement : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
     public Transform orientation;
-
+    public float publicFloat;
     float horizontalInput;
     float verticalInput;
     public Animator animator;
@@ -29,6 +29,16 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w") || Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.RightShift) && Input.GetKey("w") || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.UpArrow) == true)
+        {
+            publicFloat = 20f;
+            animator.SetBool("run", true);
+        }
+        else
+        {
+            publicFloat = 10f;
+            animator.SetBool("run", false);
+        }
         if(Input.GetKey("f") == true)
         {
             animator.SetBool("light", true);
@@ -37,7 +47,7 @@ public class movement : MonoBehaviour
         {
             animator.SetBool("light", false);
         }
-        if (Input.GetKey("w") == true || Input.GetKey("s") == true || Input.GetKey("a") == true || Input.GetKey("d") == true)
+        if (Input.GetKey("w") || Input.GetKey("s")|| Input.GetKey("a")|| Input.GetKey("d") || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) == true)
         {
             animator.SetBool("walk", true);
         }
@@ -50,7 +60,7 @@ public class movement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        rb.AddForce(moveDirection.normalized * moveSpeed * publicFloat, ForceMode.Force);
     }
     private void FixedUpdate()
     {
