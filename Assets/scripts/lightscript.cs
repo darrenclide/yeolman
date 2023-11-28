@@ -13,7 +13,7 @@ public class lightscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("f"))
+        if(Input.GetKey("f") || Input.GetKey(KeyCode.Keypad4))
         {
             handRaise = true;
         }

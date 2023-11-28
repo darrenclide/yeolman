@@ -39,7 +39,7 @@ public class movement : MonoBehaviour
             publicFloat = 10f;
             animator.SetBool("run", false);
         }
-        if(Input.GetKey("f") == true)
+        if(Input.GetKey("f") == true || Input.GetKey(KeyCode.Keypad4) == true)
         {
             animator.SetBool("light", true);
         }

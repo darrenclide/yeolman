@@ -1907,7 +1907,7 @@ Transform:
   m_GameObject: {fileID: 134386715}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -544.4, y: -259.4, z: 0.2}
+  m_LocalPosition: {x: 6.0999756, y: 0.1000061, z: 0.2}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1956,7 +1956,7 @@ Transform:
   - {fileID: 425967338}
   - {fileID: 1830222665}
   - {fileID: 1930277242}
-  m_Father: {fileID: 1719772387}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &136880748
 GameObject:
@@ -15750,7 +15750,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1719772387}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8e7a24a1e4c1d3e43985810e8e719250, type: 3}
       propertyPath: m_LocalScale.x
@@ -15766,11 +15766,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e7a24a1e4c1d3e43985810e8e719250, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -424.38
+      value: 126.119995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e7a24a1e4c1d3e43985810e8e719250, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -249
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e7a24a1e4c1d3e43985810e8e719250, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15861,11 +15861,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1391898803}
   m_SourcePrefab: {fileID: 100100000, guid: 8e7a24a1e4c1d3e43985810e8e719250, type: 3}
---- !u!4 &1391898801 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8e7a24a1e4c1d3e43985810e8e719250, type: 3}
-  m_PrefabInstance: {fileID: 1391898800}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1391898802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e7a24a1e4c1d3e43985810e8e719250, type: 3}
@@ -16986,6 +16981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1965660673}
+  textObject: {fileID: 378018655}
 --- !u!1 &1454288064
 GameObject:
   m_ObjectHideFlags: 0
@@ -19512,8 +19508,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 826449531}
-  - {fileID: 1391898801}
-  - {fileID: 134386716}
   - {fileID: 378018656}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25043,6 +25037,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1391898800}
+  - {fileID: 134386716}
   - {fileID: 1719772387}
   - {fileID: 1442516873}
   - {fileID: 1749716018}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class hat : MonoBehaviour
 {
     public GameObject target;
+    public GameObject textObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class hat : MonoBehaviour
         {
             target.gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Destroy(textObject);
         }
     }
 }
