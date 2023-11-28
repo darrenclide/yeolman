@@ -31,7 +31,7 @@ public class movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w") || Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.RightShift) && Input.GetKey("w") || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.UpArrow) == true)
         {
-            publicFloat = 20f;
+            publicFloat = 15f;
             animator.SetBool("run", true);
         }
         else
