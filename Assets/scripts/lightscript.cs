@@ -5,6 +5,7 @@ using UnityEngine;
 public class lightscript : MonoBehaviour
 {
     public GameObject ourLight;
+    public bool handRaise;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,7 +13,15 @@ public class lightscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) == true)
+        if(Input.GetKey("f"))
+        {
+            handRaise = true;
+        }
+        else
+        {
+            handRaise = false;  
+        }
+        if (Input.GetKey(KeyCode.Mouse0) == true && handRaise == true)
         {
             show();
         }
