@@ -13,7 +13,7 @@ public class movement : MonoBehaviour
     public Animator animator;
     Vector3 moveDirection;
     Rigidbody rb;
-    public AudioSource startSound;
+    public AudioSource footstepsSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +32,7 @@ public class movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w") || Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.RightShift) && Input.GetKey("w") || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.UpArrow) == true)
         {
+            
             publicFloat = 15f;
             animator.SetBool("run", true);
         }
@@ -50,11 +51,12 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKey("w") || Input.GetKey("s")|| Input.GetKey("a")|| Input.GetKey("d") || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) == true)
         {
-            startSound.enabled = true;
+            footstepsSound.enabled = true;
             animator.SetBool("walk", true);
         }
         else
         {
+            footstepsSound.enabled = false;
             animator.SetBool("walk", false);
         }
         MyInput();
