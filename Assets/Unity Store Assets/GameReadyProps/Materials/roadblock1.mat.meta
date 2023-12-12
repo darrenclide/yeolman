@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e104f67043093f41b6551fda96341f3
+timeCreated: 1530556676
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99594
+  packageName: Game Ready Lowpoly Props
+  packageVersion: 1.0.2
+  assetPath: Assets/GameReadyProps/Materials/roadblock1.mat
+  uploadId: 304140

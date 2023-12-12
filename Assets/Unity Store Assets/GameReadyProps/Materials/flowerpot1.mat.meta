@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3855965cf8e99e04a9693d42ca17489a
+timeCreated: 1530557767
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99594
+  packageName: Game Ready Lowpoly Props
+  packageVersion: 1.0.2
+  assetPath: Assets/GameReadyProps/Materials/flowerpot1.mat
+  uploadId: 304140

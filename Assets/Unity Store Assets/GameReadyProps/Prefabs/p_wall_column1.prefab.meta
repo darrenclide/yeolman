@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 93333f971bf12ce45b441add673b4be0
+timeCreated: 1532414269
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99594
+  packageName: Game Ready Lowpoly Props
+  packageVersion: 1.0.2
+  assetPath: Assets/GameReadyProps/Prefabs/p_wall_column1.prefab
+  uploadId: 304140

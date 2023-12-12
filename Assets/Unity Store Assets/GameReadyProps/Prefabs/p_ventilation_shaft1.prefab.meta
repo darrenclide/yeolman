@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c798fd0bf1c2d684e923d665c6f371d7
+timeCreated: 1532414249
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99594
+  packageName: Game Ready Lowpoly Props
+  packageVersion: 1.0.2
+  assetPath: Assets/GameReadyProps/Prefabs/p_ventilation_shaft1.prefab
+  uploadId: 304140

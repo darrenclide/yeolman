@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 39464ddd37ab0b843a5833a909d823bd
+timeCreated: 1532414275
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99594
+  packageName: Game Ready Lowpoly Props
+  packageVersion: 1.0.2
+  assetPath: Assets/GameReadyProps/Prefabs/p_woodbox1.prefab
+  uploadId: 304140

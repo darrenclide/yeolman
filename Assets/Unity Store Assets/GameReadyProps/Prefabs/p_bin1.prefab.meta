@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 027850f884e1d2e42a15ea5d5efa9df1
+timeCreated: 1532414239
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99594
+  packageName: Game Ready Lowpoly Props
+  packageVersion: 1.0.2
+  assetPath: Assets/GameReadyProps/Prefabs/p_bin1.prefab
+  uploadId: 304140

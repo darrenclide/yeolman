@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3c4272a7e63956e45aed49880a0b726b
+timeCreated: 1532414235
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 99594
+  packageName: Game Ready Lowpoly Props
+  packageVersion: 1.0.2
+  assetPath: Assets/GameReadyProps/Prefabs/p_barrel1.prefab
+  uploadId: 304140

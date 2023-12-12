@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class movement : MonoBehaviour
 {
@@ -10,13 +11,23 @@ public class movement : MonoBehaviour
     public float publicFloat;
     float horizontalInput;
     float verticalInput;
+
+    public Slider slider;
+    public void SetStamina(float stamina)
+    {
+        slider.value = stamina;
+    }
     public Animator animator;
     Vector3 moveDirection;
     Rigidbody rb;
+    public float stamina;
+    public float staminaRegen;
     public AudioSource footstepsSound;
     // Start is called before the first frame update
     void Start()
     {
+        staminaRegen = 15f;
+        stamina = 100;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -30,14 +41,19 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w") || Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.RightShift) && Input.GetKey("w") || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.UpArrow) == true)
+        SetStamina(stamina);
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w") == true && stamina > 0)
         {
-            
+            stamina -= staminaRegen * Time.deltaTime;
             publicFloat = 15f;
             animator.SetBool("run", true);
         }
         else
         {
+            if(stamina < 101)
+            {
+                stamina += staminaRegen * Time.deltaTime;
+            }
             publicFloat = 10f;
             animator.SetBool("run", false);
         }
@@ -47,6 +63,7 @@ public class movement : MonoBehaviour
         }
         else 
         {
+       
             animator.SetBool("light", false);
         }
         if (Input.GetKey("w") || Input.GetKey("s")|| Input.GetKey("a")|| Input.GetKey("d") || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) == true)
