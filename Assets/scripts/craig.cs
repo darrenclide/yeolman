@@ -30,7 +30,7 @@ public class craig : MonoBehaviour
         
             if (distance < 12.5 && distance > -12.5)
             {
-                print("chase");
+                print("Craig_NPC: Chasing player.");
                 Debug.DrawRay(playerPosition.position, Vector3.up, UnityEngine.Color.red, 1.0f); //so you can see with gizmos
                 agent.SetDestination(playerPosition.position);
             }
@@ -39,7 +39,7 @@ public class craig : MonoBehaviour
                 Vector3 point;
                 if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
                 {
-                    print("wander");
+                    print("Craig_NPC: Wandering.");
                     Debug.DrawRay(point, Vector3.up, UnityEngine.Color.blue, 1.0f); //so you can see with gizmos
                     agent.SetDestination(point);
                 }

@@ -23,7 +23,6 @@ public class lightscript : MonoBehaviour
     void Update()
     {
         SetCharge(charge);
-        print("charge: "+charge);
         if(Input.GetKey("f") || Input.GetKey(KeyCode.Keypad4))
         {
             handRaise = true;

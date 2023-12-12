@@ -42,7 +42,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         SetStamina(stamina);
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w") == true && stamina > 0)
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w") == true && stamina > 0 || Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.UpArrow) == true && stamina > 0)
         {
             stamina -= staminaRegen * Time.deltaTime;
             publicFloat = 15f;

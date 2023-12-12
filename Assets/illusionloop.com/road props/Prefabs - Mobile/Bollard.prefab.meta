@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a9e65c6e583d9244099eafc6d8e2b2ce
+timeCreated: 1531586727
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 123340
+  packageName: Road Props - Low Poly
+  packageVersion: 1.0
+  assetPath: Assets/illusionloop.com/road props/Prefabs - Mobile/Bollard.prefab
+  uploadId: 255917

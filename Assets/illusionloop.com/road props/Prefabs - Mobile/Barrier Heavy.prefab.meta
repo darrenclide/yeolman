@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e74cc5dcccf056846b28e67dac84038e
+timeCreated: 1531586719
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 123340
+  packageName: Road Props - Low Poly
+  packageVersion: 1.0
+  assetPath: Assets/illusionloop.com/road props/Prefabs - Mobile/Barrier Heavy.prefab
+  uploadId: 255917
