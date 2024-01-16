@@ -4,6 +4,7 @@ using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements.Experimental;
 using static UnityEngine.GraphicsBuffer;
 
 public class craig : MonoBehaviour
@@ -12,6 +13,8 @@ public class craig : MonoBehaviour
     public Transform playerPosition;
     public NavMeshAgent agent;
     float distance;
+    int Chasing;
+    public Animator animator;
     public LayerMask playerLayerMask;
     RaycastHit hit;
     public float range; //radius of sphere
@@ -27,9 +30,23 @@ public class craig : MonoBehaviour
     void Update()
     {
         distance = player.transform.position.x - transform.position.x;
-        
-            if (distance < 12.5 && distance > -12.5)
+            if (distance < 6 && distance > -6)
             {
+                if (distance < 1 && distance > -1)
+                {
+                    animator.SetBool("Run", false);
+                    animator.SetBool("bonk", true);
+                }
+                else
+                {
+                    animator.SetBool("bonk", false);
+                }
+                if (Chasing == 0)
+                {
+                    animator.SetBool("Run", true);
+                }
+                Chasing = 1;
+                agent.speed = 25f;
                 print("Craig_NPC: Chasing player.");
                 Debug.DrawRay(playerPosition.position, Vector3.up, UnityEngine.Color.red, 1.0f); //so you can see with gizmos
                 agent.SetDestination(playerPosition.position);
@@ -40,9 +57,16 @@ public class craig : MonoBehaviour
                 if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
                 {
                     print("Craig_NPC: Wandering.");
+                    animator.SetBool("Walk", true);
                     Debug.DrawRay(point, Vector3.up, UnityEngine.Color.blue, 1.0f); //so you can see with gizmos
                     agent.SetDestination(point);
                 }
+            }
+            else
+            {
+                agent.speed = 3.5f;
+                Chasing = 0;
+                animator.SetBool("Run", false);
             }
     }
     bool IsObjectVisible(Transform playerPosition)
