@@ -11,6 +11,8 @@ public class movement : MonoBehaviour
     public float publicFloat;
     float horizontalInput;
     float verticalInput;
+    public LayerMask groundLayer;
+
 
     public Slider slider;
     public void SetStamina(float stamina)
@@ -85,6 +87,12 @@ public class movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        MovePlayer();
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.8f,groundLayer))
+        {
+       
+            Debug.Log("Did Hit");
+            MovePlayer();
+        }
     }
 }
